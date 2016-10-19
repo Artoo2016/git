@@ -90,3 +90,11 @@ form {
 .cf:after {
     clear: both;
 }
+/* Da qui scrive luigi */
+TEXTAREA{
+	resize: none;
+}
+
+.form-row{
+	color: gray;
+}
