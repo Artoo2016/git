@@ -65,6 +65,29 @@
 			  </div>
 			</div>
 
+
+<!-- *************************************MAPPA******************************* -->
+			<div class="container"> <!-- DIV per mappa... DA EDITARE -->
+				<div id="map" style="width: 300px; height: 300px;"></div>
+			</div> <!-- END DIV mappa -->
+
+		<script src="javascripts/jquery.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY"></script>
+		<script type="text/javascript" src="javascripts/jquery.googlemap.js"></script>
+		<script type="text/javascript">
+			
+			$(function() {
+			    $("#map").googleMap({
+			      zoom: 10, // Initial zoom level (optional)
+			      coords: [43.607232,13.406334], // Map center (optional)
+			      type: "ROADMAP" // Map type (optional)
+			    });
+			})
+
+
+		</script>
+
+
 </body>
 </html>
 
