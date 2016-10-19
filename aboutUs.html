@@ -16,17 +16,18 @@
    
     
 
-    <link href="css/aboutus.css" rel="stylesheet">
+    <link href="css/aboutUs.css" rel="stylesheet">
 
 
   </head>
 
 <body>
 
-
-
+<!-- 		**********************************************  FORM CONTATTI
+ -->	
 	<div class="container">
 		<div class="row form-row">
+		<div class="col-sm-6">
 		<h1>Contattaci</h1>
 		<form>
 			<div class="form-group">
@@ -45,11 +46,33 @@
 			<label for="input-name">Testo:</label>
 		    <textarea name="message" class="form-control" type="text" id="input-message" placeholder="Message" rows="3"></textarea>
 		  </div>  
-		  <input type="submit" class="btn btn-default" value="Submit" id="input-submit">
+		  <input type="submit" class="btn btn-default center-block" value="Submit" id="input-submit">
 		</form>
 		</div>
+		<!-- DIV per mappa... DA EDITARE -->
+		<div class="col-sm-6">
+		<div id="map" style="width: 100px; height: 100px;"></div>
+		<!-- END DIV mappa -->
+		</div>
+		</div>
 
-</div>
+
+		<script src="javascripts/jquery.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6RCSnKUgxdil0yWT0hffuZuvCpa8R--Q"></script>
+		<script type="text/javascript" src="javascripts/jquery.googlemap.js"></script>
+		<script type="text/javascript">
+			
+			$(function() {
+			    $("#map").googleMap({
+			      zoom: 10, // Initial zoom level (optional)
+			      coords: [43.607232,13.406334], // Map center (optional)
+			      type: "ROADMAP" // Map type (optional)
+			    });
+			})
+
+
+		</script>
+
 
 </body>
 </html>
