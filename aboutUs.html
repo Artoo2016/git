@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico"> <!-- ****************** RISOLVI!! --> 
+    <!--<link rel="icon" href="../../favicon.ico"> --><!-- ****************** RISOLVI!! --> 
 
     <title>About Us</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,8 @@
    
     
 
-    <link href="css/aboutUs.css" rel="stylesheet">
+    <!-- <link href="" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/aboutUs.css">
 
 
   </head>
@@ -49,6 +50,10 @@
 		<h1>Contattaci</h1>
 		<form>
 			<div class="form-group">
+			<label for="input-name">Nome:</label>
+		    <input type="text" id="input-name" class="form-control" placeholder="Nome">
+			</div>
+			<div class="form-group">
 			<label for="input-name">Email:</label>
 		    <input type="email" id="input-email" class="form-control" placeholder="Email address">
 			</div>
@@ -65,26 +70,29 @@
 		</div>
 		<div class="col-sm-6">
 		<!-- DIV per mappa... DA EDITARE -->
-		<div id="map" style="width: 300px; height: 300px;"></div>
+		<div id="map" style="width: 350px; height: 350px;"></div>
 		<!-- END DIV mappa -->
 		</div>
 		</div>
 
 
-		<script src="javascripts/jquery.js"></script>
+		<!-- <script src="javascripts/jquery.js"></script> -->
 <!-- *************************************MAPPA******************************* -->
 
-		<script src="lib/jquery-3.1.1.slim.min"></script>
+		<script src="lib/jquery-3.1.1.slim.min.js"></script> 
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6RCSnKUgxdil0yWT0hffuZuvCpa8R--Q"></script>
 		<script type="text/javascript" src="lib/jquery.googlemap.js"></script>
 		<script type="text/javascript">
 			
 			$(function() {
 			    $("#map").googleMap({
-			      zoom: 10, // Initial zoom level (optional)
-			      coords: [43.607232,13.406334], // Map center (optional)
+			      zoom: 16, // Initial zoom level (optional)
+			      coords: [43.6072714,13.4047605], // Map center (optional)
 			      type: "ROADMAP" // Map type (optional)
 			    });
+			    $("#map").addMarker({
+      				coords: [43.6072172,13.4062804], // GPS coords
+    			});
 			})
 
 
