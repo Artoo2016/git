@@ -177,3 +177,7 @@ TEXTAREA{
 	color: gray;
 }
 
+body{
+  font-size: 15px;
+  background-color: red !important;
+}
