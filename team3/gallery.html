@@ -11,15 +11,8 @@
     <title>GALLERY</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="lib/carousel-lib/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="lib/carousel-lib/assets/js/ie-emulation-modes-warning.js"></script>
-
+    <link href="../bootstrap/css/bootstrap.min.css"rel="stylesheet">
+<!-- lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"  -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -27,12 +20,10 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="lib/carousel-lib/css/carousel.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="lib/GridLoadingEffects/css/default.css" />
     <link rel="stylesheet" type="text/css" href="lib/GridLoadingEffects/css/component.css" />
     <link href="lib/LightBox/css/lightbox.css" rel="stylesheet">
     <script src="lib/GridLoadingEffects/js/modernizr.custom.js"></script>
-    <link href="css/style.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -49,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="OFFLINE/logo.png"/></a>
+              <a class="navbar-brand" href="#"><img/></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
@@ -68,6 +59,7 @@
 
 <!--GRIGLIA DELLA DALLERIA-->
 <div class="container">
+  <button id="mostra_acqua">Mostra Acqua</button>
   <ul class="grid effect-8" id="grid">
     <li><a class="terra" href="images/terra_1.jpg" data-lightbox="galleria"><img src="images/terra_1.jpg"></a></li>
     <li><a class="aria" href="images/aria_1.jpg" data-lightbox="galleria"><img src="images/aria_1.jpg"></a></li>
@@ -108,11 +100,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src=".lib/jquery-3.1.1.min.js"><\/script>')</script>
-    <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!-- lib/bootstrap-3.3.7-dist/js/bootstrap.min.js -->
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="lib/carousel-lib/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="lib/carousel-lib/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="lib/GridLoadingEffects/js/masonry.pkgd.min.js"></script>
     <script src="lib/GridLoadingEffects/js/imagesloaded.js"></script>
     <script src="lib/GridLoadingEffects/js/classie.js"></script>
@@ -123,7 +114,13 @@
         minDuration : 0.4,
         maxDuration : 0.6,
         viewportFactor : 0.2
-      } );
+      });
+    $(document).ready(function(){
+      $("#mostra_acqua").on("click", function(){
+        $(".aria").css("display","none");
+        $(".terra").css("display","none");
+      });
+    });
     </script>
   </body>
 </html>
