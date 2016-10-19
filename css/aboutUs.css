@@ -1,3 +1,16 @@
+.lista_descrizione{
+  font-size: 15px;
+}
+
+.descrizione{
+  background-color: #eee;
+  text-align: left;
+}
+
+.testo_descrizione{
+  font-size: 20px;
+}
+
 /*@import "compass/css3";*/
 
 // Font imports
@@ -177,7 +190,3 @@ TEXTAREA{
 	color: gray;
 }
 
-body{
-  font-size: 15px;
-  background-color: red !important;
-}
